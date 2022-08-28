@@ -3,16 +3,21 @@
 :root {
     --cor01: #0845ef;
     --cor02: #ffffff;
+    --cor03: #333;
+    --cor04: #000;
+    --cor05: #111;
   
     --fonte01: 'Poppins', sans-serif 
 }
-/* apresentacao  */
+
+/* Apresentção  */
 .apresentacao {
     position: absolute;
     top: 50%;
     right: 5%;
     transform: translate(0, -50%);
-    color: #fff;
+    color: var(--cor02);
+    z-index: -1;
 }  
 .apresentacao h3 {
     font-weight: 400;
@@ -24,6 +29,7 @@
 }
 .apresentacao h4 {
     font-size: 25px;
+    font-weight: 500;
 }
 .apresentacao h4 span {
     color: var(--cor01);
@@ -34,7 +40,7 @@
     padding: .8rem 2.5rem;
     border: 1px solid var(--cor01);
     background-color: var(--cor01);
-    color: #fff;
+    color: var(--cor02);
     margin-top: 2rem;
 }
 .apresentacao a:hover {
@@ -81,38 +87,8 @@
       font-size: 1.6rem;
     }
   }  
-.control {
-    position: fixed;
-    right: -3.5rem;
-    top: 15%;
-    transition: all 300ms ease-in-out;
-    z-index: 1000;
-}  
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-  
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-.control .widget {
-    position: absolute;
-    left: -3.4rem;
-    border-radius: 1rem 0 0 1rem;
-    padding: .5rem .7rem;
-    margin-right: .1rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .4);
-    cursor: pointer;
-    background-color: #fff;
-    text-align: center;
-}
-.control .widget i {
-    font-size: 2rem;
-    animation: soin 2s linear infinite;
-}  
-  /* Sobre  */ 
+
+/* Sobre  */ 
 .section {
     padding: 5rem 0 7rem 0;
     overflow-x: hidden;
@@ -157,7 +133,7 @@
 .right p {
     line-height: 2;
     margin-bottom: 2rem;
-    color: #333;
+    color: var(--cor03);
     text-align: justify;
     text-indent: 2em;
 } 
@@ -168,7 +144,7 @@ a.btn, .btn-form {
     display: inline-block;
     padding: 1rem 2rem;
     background-color: var(--cor01);
-    color: #fff;
+    color: var(--cor02);
     border-radius: .5rem;
     border: 2px solid var(--cor01);
     box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
@@ -181,13 +157,14 @@ a.btn:hover, .btn-form:hover {
 }
 a.btn:active, .btn-form:active {
     transform: translateY(0);
-}  
-  /* Serviços */ 
+} 
+
+/* Serviços */ 
 .theme {
-    background-color: #000;
+    background-color: var(--cor04);
 } 
 .theme .title {
-    color: #fff;
+    color: var(--cor02);
 } 
 .servicos-center {
     display: grid;
@@ -195,8 +172,8 @@ a.btn:active, .btn-form:active {
     gap: 3rem;
 } 
 .servico {
-    color: #fff;
-    background-color: #111;
+    color: var(--cor02);
+    background-color: var(--cor05);
     padding: 2rem;
     text-align: center;
     border-radius: 1rem;
@@ -213,21 +190,22 @@ a.btn:active, .btn-form:active {
 } 
 .servico p {
     font-size: 1.4rem;
-    color: #f1f1f1;
+    color: var(--cor02);
 } 
 .servico:hover {
     background-color: var(--cor01);
 } 
 .servico span:hover{
-    color: #fff;
+    color: var(--cor02);
 }  
 .servico:hover span {
-    color: #fff;
+    color: var(--cor02);
 }
-  /* Habilidades  */  
+
+/* Habilidades  */  
 .team {
-    color: #fff;
-    background-color: #111;
+    color: var(--cor02);
+    background-color: var(--cor05);
     padding: 3rem;
     text-align: center;
     border-radius: 1rem;
@@ -259,13 +237,14 @@ a.btn:active, .btn-form:active {
     margin: 0 auto 1rem auto;
 } 
 .team:hover {
-    border-bottom: 4px solid #fff;
+    border-bottom: 4px solid var(--cor02);
     background-color: var(--cor01);
 } 
 .team:hover .img-cover {
-   border-color: #fff;
-} 
-  /* Projetos  */  
+   border-color: var(--cor02);
+}
+
+/* Projetos  */  
 .projeto-center {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -313,7 +292,8 @@ a.btn:active, .btn-form:active {
       gap: 4rem 0;
     }
   }
-  /* Contato  */
+
+/* Contato  */
 .contact-center{
     display: grid;
     grid-template-columns: 1fr 1fr;

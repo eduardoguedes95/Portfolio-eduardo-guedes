@@ -13,28 +13,51 @@ window.addEventListener("scroll", () => {
 });
 
 
-// Toggle Menu
-const menu = document.querySelector(".menu");
-const navOpen = document.querySelector(".hamburger");
-const navClose = document.querySelector(".close");
+// Menu Navbar
+class MobileNavbar {
+  constructor(mobileMenu, navList, navLinks) {
+    this.mobileMenu = document.querySelector(mobileMenu);
+    this.navList = document.querySelector(navList);
+    this.navLinks = document.querySelectorAll(navLinks);
+    this.activeClass = "active";
 
-const navLeft = menu.getBoundingClientRect().left;
-navOpen.addEventListener("click", () => {
-  if (navLeft < 0) {
-    menu.classList.add("show");
-    document.body.classList.add("show");
-    navBar.classList.add("show");
+    this.handleClick = this.handleClick.bind(this);
   }
-});
 
-navClose.addEventListener("click", () => {
-  if (navLeft < 0) {
-    menu.classList.remove("show");
-    document.body.classList.remove("show");
-    navBar.classList.remove("show");
+  animateLinks() {
+    this.navLinks.forEach((link, index) => {
+      link.style.animation
+        ? (link.style.animation = "")
+        : (link.style.animation = `navLinkFade 0.5s ease forwards ${
+            index / 7 + 0.3
+          }s`);
+    });
   }
-});
 
+  handleClick() {
+    this.navList.classList.toggle(this.activeClass);
+    this.mobileMenu.classList.toggle(this.activeClass);
+    this.animateLinks();
+  }
+
+  addClickEvent() {
+    this.mobileMenu.addEventListener("click", this.handleClick);
+  }
+
+  init() {
+    if (this.mobileMenu) {
+      this.addClickEvent();
+    }
+    return this;
+  }
+}
+
+const mobileNavbar = new MobileNavbar(
+  ".mobile-menu",
+  ".nav-list",
+  ".nav-list li",
+);
+mobileNavbar.init();
 
 // Glidejs
 
@@ -87,27 +110,3 @@ new TypeIt("#type2", {
   .pause(500)
   .delete(9)
   .go();
-
-gsap.from(".logo", { opacity: 0, duration: 1, delay: 0.5, y: -10 });
-gsap.from(".hamburger", { opacity: 0, duration: 1, delay: 0.8, x: 20 });
-gsap.from(".banner", { opacity: 0, duration: 1, delay: 1.1, x: -200 });
-gsap.from(".apresentacao h3", { opacity: 0, duration: 1, delay: 1.4, y: -50 });
-gsap.from(".apresentacao h1", { opacity: 0, duration: 1, delay: 1.7, y: -45 });
-gsap.from(".apresentacao h4", { opacity: 0, duration: 1, delay: 2.1, y: -30 });
-gsap.from(".apresentacao a", { opacity: 0, duration: 1, delay: 2.4, y: -10 });
-
-gsap.from(".nav-item", {
-  opacity: 0,
-  duration: 1,
-  delay: 1,
-  y: 30,
-  stagger: 0.2,
-});
-
-gsap.from(".icons span", {
-  opacity: 0,
-  duration: 1,
-  delay: 2.5,
-  x: -30,
-  stagger: 0.2,
-});
