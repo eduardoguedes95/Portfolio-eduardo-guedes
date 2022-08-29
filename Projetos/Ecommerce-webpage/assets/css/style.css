@@ -98,7 +98,7 @@ section{
 .home{
 	min-height: 100vh;
 	width: 100%;
-	background-image: url("/Ecommerce-webpage/assets/images/background/background-img.jpg");
+	background-image: url("/Projetos/Ecommerce-webpage/assets/images/background/background-img.jpg");
 	background-size: cover;
 	background-position: center top;
 	position: relative;
@@ -198,7 +198,7 @@ section{
 .promo{
 	height: 60vh;
 	width: 100%;
-	background-image: url("/Ecommerce-webpage/assets/images/background/background-middle.png");
+	background-image: url("/Projetos/Ecommerce-webpage/assets/images/background/background-middle.png");
 	background-size: cover;
 	background-position: center;
 	display: flex;
