@@ -23,7 +23,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image: url("/Projetos/Login-popArt/assets/images/background.jpg");
+    background-image: url("/Projetos/Login-popArt-wbpg/assets/images/background.jpg");
     background-size: cover;
 
 }
@@ -45,7 +45,7 @@ body {
     left: -50%;
     width: 100%;
     height: 100%;
-    background-image: url("/Projetos/Login-popArt/assets/images/cat-img.jpg");
+    background-image: url("/Projetos/Login-popArt-wbpg/assets/images/cat-img.jpg");
     background-size: cover;
     z-index: 6;
     transform: translateX(100%);
