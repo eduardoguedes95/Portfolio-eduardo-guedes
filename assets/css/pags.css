@@ -11,7 +11,7 @@
 }
 
 /* Apresentção  */
-.apresentacao {
+.intro {
     position: absolute;
     top: 50%;
     right: 5%;
@@ -19,23 +19,23 @@
     color: var(--cor02);
     z-index: -1;
 }  
-.apresentacao h3 {
+.intro h3 {
     font-weight: 400;
     font-size: 2rem;
 }
-.apresentacao h1 {
+.intro h1 {
     font-size: 9rem;
     margin: 0;
 }
-.apresentacao h4 {
+.intro h4 {
     font-size: 25px;
     font-weight: 500;
 }
-.apresentacao h4 span {
+.intro h4 span {
     color: var(--cor01);
     text-decoration: underline;
 }
-.apresentacao a:link, .apresentacao a:visited {
+.intro a:link, .intro a:visited {
     display: inline-block;
     padding: .8rem 2.5rem;
     border: 1px solid var(--cor01);
@@ -43,47 +43,47 @@
     color: var(--cor02);
     margin-top: 2rem;
 }
-.apresentacao a:hover {
+.intro a:hover {
     background-color: transparent;
 } 
   @media only screen and (max-width:1200px) {
-    .apresentacao {
+    .intro {
       transform: translate(-5%, 50%);
     }
   
-    .apresentacao h1 {
+    .intro h1 {
       font-size: 7rem;
     }
   }  
   @media only screen and (max-width:996px)  {
-    .apresentacao {
+    .intro {
       transform: translate(5%, 50%);
     }
   
-    .apresentacao h1 {
+    .intro h1 {
       font-size: 6rem;
     }
   } 
   @media only screen and (max-width:768px) {
-    .apresentacao h1 {
+    .intro h1 {
       font-size: 5rem;
     }
   } 
   @media only screen and (max-width:567px) {
-    .apresentacao {
+    .intro {
       top: 65%;
       transform: translate(0, -50%);
     }
   
-    .apresentacao h1 {
+    .intro h1 {
       font-size: 4rem;
     }
   
-    .apresentacao h3 {
+    .intro h3 {
       font-size: 1.6rem;
     }
   
-    .apresentacao h4 {
+    .intro h4 {
       font-size: 1.6rem;
     }
   }  
