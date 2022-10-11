@@ -90,23 +90,10 @@ new TypeIt("#type1", {
   loop: true,
   waitUntilVisible: true,
 })
-  .type("Designer", { delay: 400 })
-  .pause(500)
-  .delete(9)
   .type("Developer", { delay: 400 })
   .pause(500)
   .delete(9)
-  .go();
-
-new TypeIt("#type2", {
-  speed: 120,
-  loop: true,
-  waitUntilVisible: true,
-})
-  .type("Web Designer", { delay: 400 })
-  .pause(500)
-  .delete(9)
-  .type(" Developer", { delay: 400 })
+  .type("Designer.", { delay: 400 })
   .pause(500)
   .delete(9)
   .go();
