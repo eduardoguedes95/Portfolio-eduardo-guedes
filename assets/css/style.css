@@ -170,6 +170,7 @@ nav {
 .logo h1 {
   font-size: 2.5rem;
   color: var(--cor02);
+  text-transform: uppercase;
 }
 .logo h1 span {
   font-weight: bold;
